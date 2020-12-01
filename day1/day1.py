@@ -7,7 +7,6 @@ test_input = [1721,979,366,299,675,1456]
 
 def twoFinder(input):
     finished = False
-    index = 0
     for num1 in input:
         for num2 in input:
             if num1+num2 == 2020:
@@ -20,15 +19,12 @@ def twoFinder(input):
                 continue
         if finished == True:
             break
-        else: 
-            index+=1
 
 twoFinder(input)
 #-------- Part 1 complete --------
 
 def threeFinder(input):
     finished = False
-    index = 0
     for num1 in input:
         for num2 in input:
             if num1+num2 > 2020-min(input) or finished == True:
@@ -43,7 +39,5 @@ def threeFinder(input):
                         break
         if finished == True:
             break
-        else: 
-            index+=1
 
 threeFinder(input)
