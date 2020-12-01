@@ -7,21 +7,23 @@ test_input = [1721,979,366,299,675,1456]
 
 def twoFinder(input):
     finished = False
-    for index in range(len(input)):
-        for number in input:
-            if input[index]+number == 2020:
+    index = 0
+    for num1 in input:
+        for num2 in input:
+            if num1+num2 == 2020:
                 finished = True
-                print("Numbers found! They are: " + str(input[index]) + " and " + str(number) + "!")
+                print("Numbers found! They are: " + str(num1) + " and " + str(num2) + "!")
                 print("Multiplying...")
-                print(input[index]*number)
+                print(num1*num2)
                 break
             else:
                 continue
-        print("Loop " + str(index) + " complete...")
         if finished == True:
             break
+        else: 
+            index+=1
 
-#twoFinder(input)
+twoFinder(input)
 #-------- Part 1 complete --------
 
 def threeFinder(input):
@@ -43,6 +45,5 @@ def threeFinder(input):
             break
         else: 
             index+=1
-        print("Loop " + str(index) + " complete...")
 
 threeFinder(input)
