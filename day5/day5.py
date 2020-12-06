@@ -1,5 +1,4 @@
 import math
-import numpy as np
 input = open("day5_input.txt").read().split("\n")
 
 
