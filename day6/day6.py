@@ -1,4 +1,3 @@
-import string
 input = open("day6_input.txt").read().split("\n\n")
 
 input1 = [group.replace("\n", "") for group in input]
